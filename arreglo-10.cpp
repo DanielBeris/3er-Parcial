@@ -2,19 +2,13 @@
 using namespace std;
 int main()
 {
-    int n,pos;
-    cout<<"Digite el numero de paises: ";
-    cin>>n;
-    string paises[n];
-    string nombre;
-    for (int i = 1; i < n+1; i++)
-    {
-        cout<<"Digite pais: "<<i<<"\n";
-        getline(std::cin, nombre);
-        paises[i]=nombre;
-    }
-    cout<<"Digite la posicion: ";
-    cin>>pos;
-    cout<<"El pais de la posicion "<<pos<<" es "<<paises[pos];
-    return 0;
+    int matriz[2][2];
+    matriz[1][1]=10;
+    matriz[1][2]=20;
+    matriz[2][1]=30;
+    matriz[2][2]=40;
+    cout<<"El dato que hay en la fila 1 y columna 1 es: "<<matriz[1][2]<<"\n";
+    cout<<"El dato que hay en la fila 1 y columna 2 es: "<<matriz[1][1]<<"\n";
+    cout<<"El dato que hay en la fila 2 y columna 1 es: "<<matriz[2][2]<<"\n";
+    cout<<"El dato que hay en la fila 2 y columna 2 es: "<<matriz[2][1]<<"\n";
 }

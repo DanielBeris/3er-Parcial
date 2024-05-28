@@ -1,30 +1,17 @@
 #include <iostream>
+#include <time.h>
+#include <stdlib.h>
 using namespace std;
 int main()
 {
-    int acum,acum2,t,num;
-    cout<<"Digite el tamaño del vector 1:  ";
-    cin>>t;
-    int vector1[t];
-    for (int i = 0; i < t; i++)
+    int num[10];
+    srand(time(NULL));
+    for (int i = 1; i <= 10; i++)
     {
-        cout<<"Digite el numero  "<<i+1<<"\n";
-        cin>>num;
-        vector1[i]=num;
-        acum=acum+vector1[i];
+        num[i]=1+rand()%(100+1-1);
     }
-    cout<<"Digite el tamaño del vector 2:  ";
-    cin>>t;
-    int vector2[t];
-    for (int i = 0; i < t; i++)
+    for (int i = 1; i <= 10; i++)
     {
-        cout<<"Digite el numero  "<<i+1<<"\n";
-        cin>>num;
-        vector2[i]=num;
-        acum2=acum2+vector2[i];
+        cout<<"los numeros aleatorios son: "<<num[i]<<"\n";
     }
-    int vector3[2];
-    vector3[1]=acum2+acum;
-    cout<<"Resultado total: "<<vector3[1];
-    return 0;
 }

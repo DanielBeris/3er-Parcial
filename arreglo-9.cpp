@@ -2,24 +2,19 @@
 using namespace std;
 int main()
 {
-    int p,numero,cont;
-    cout<<"Digite un numero de posiciones ";
-    cin>>p;
-    int num[p];
-    for (int i = 1; i < p+1; i++)
+    int n,pos;
+    cout<<"Digite el numero de paises: ";
+    cin>>n;
+    string paises[n];
+    string nombre;
+    for (int i = 1; i < n+1; i++)
     {
-        cout<<"Digite numero "<<i<<"\n";
-        cin>>numero;
-        num[i]=numero;
+        cout<<"Digite pais: "<<i<<"\n";
+        getline(std::cin, nombre);
+        paises[i]=nombre;
     }
-    for (int i = 1; i < p+1; i++)
-    {
-        cout<<"Los numeros integrados son: "<<num[i]<<"\n";
-        if (num[i]>0)
-        {
-            cont=cont+1;
-        }
-    }
-    cout<<"Hay "<<cont<<" numeros positivos";
+    cout<<"Digite la posicion: ";
+    cin>>pos;
+    cout<<"El pais de la posicion "<<pos<<" es "<<paises[pos];
     return 0;
 }

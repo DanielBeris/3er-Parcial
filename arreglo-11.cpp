@@ -2,13 +2,27 @@
 using namespace std;
 int main()
 {
-    int matriz[2][2];
-    matriz[1][1]=10;
-    matriz[1][2]=20;
-    matriz[2][1]=30;
-    matriz[2][2]=40;
-    cout<<"El dato que hay en la fila 1 y columna 1 es: "<<matriz[1][2]<<"\n";
-    cout<<"El dato que hay en la fila 1 y columna 2 es: "<<matriz[1][1]<<"\n";
-    cout<<"El dato que hay en la fila 2 y columna 1 es: "<<matriz[2][2]<<"\n";
-    cout<<"El dato que hay en la fila 2 y columna 2 es: "<<matriz[2][1]<<"\n";
+    int f,c,numero;
+    cout<<"Digita el nuemro de filas: ";
+    cin>>f;
+    cout<<"Digita el nuemro de columnas: ";
+    cin>>c;
+    int matriz[f][c];
+    for (int i = 1; i < f+1; i++)
+    {
+        for (int j = 1; j < c+1; j++)
+        {
+            cout<<"Digite dato para la fila "<<i<<" columna "<<j<<"\n";
+            cin>>numero;
+            matriz[i][j]=numero;
+        }
+    }
+    for (int i = 1; i < f+1; i++)
+    {
+        for (int j = 1; j < c+1; j++)
+        {
+            cout<<"Los datoos que hay en la matriz son "<<matriz[i][j]<<"\n";
+        }
+    }
+    return 0;
 }

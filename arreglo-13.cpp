@@ -1,30 +1,20 @@
 #include <iostream>
+#include <time.h>
+#include <stdlib.h>
 using namespace std;
 int main()
 {
-    int f,c,numero,acum;
-    cout<<"Digita el nuemro de filas: ";
-    cin>>f;
-    cout<<"Digita el nuemro de columnas: ";
-    cin>>c;
-    int matriz[f][c];
-    for (int i = 1; i < f+1; i++)
+    int matriz[3][3];
+    srand(time(NULL));
+    for (int i = 1; i < 4; i++)
     {
-        for (int j = 1; j < c+1; j++)
+        for (int j = 1; j < 4; j++)
         {
-            cout<<"Digite dato para la fila "<<i<<" columna "<<j<<"\n";
-            cin>>numero;
-            matriz[i][j]=numero;
-        }
-        acum=acum+matriz[i][1];
-    }
-    for (int i = 1; i < f+1; i++)
-    {
-        for (int j = 1; j < c+1; j++)
-        {
-            cout<<"Los datoos que hay en la matriz son "<<matriz[i][j]<<"\n";
+            matriz[i][j]=1+rand()%(100+1-1);
         }
     }
-    cout<<"Todos los elementos de la columna 1 sumanun total de: "<<acum;
-    return 0;
+    for (int i = 1; i < 4; i++)
+    {
+        cout<<matriz[i][1]<<" "<<matriz[i][3]<<" "<<matriz[i][3];
+    }
 }

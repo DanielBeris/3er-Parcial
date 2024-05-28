@@ -2,22 +2,21 @@
 using namespace std;
 int main()
 {
-    char arreglo1[2];
-    int arreglo2[3];
-    arreglo1[1]='Fer';
-    arreglo1[2]='Oscar';
-    arreglo2[1]=76;
-    arreglo2[2]=56;
-    arreglo2[3]=10;
-    cout<<"Arreglo 1 \n";
-    for (int i=1; i<=2; i++)
+    int acum,t,num;
+    cout<<"Digite el tamaño del vector: \n";
+    cin>>t;
+    int vector[t];
+    for (int i = 0; i < t; i++)
     {
-        cout<<"El dato de la posicion "<<i<<" es: "<<arreglo1[i]<<"\n";
+        cout<<"Digite un numero: \n";
+        cin>>num;
+        vector[i]=num;
+        acum=acum+vector[i];
     }
-    cout<<"Arreglo 2 \n";
-    for (int i=1; i<=3; i++)
+    for (int i = 0; i < t; i++)
     {
-        cout<<"El dato de la posicion "<<i<<" es: "<<arreglo2[i]<<"\n";
+        cout<<"La suma de "<<vector[i]<<"\n";
     }
+    cout<<"es "<<acum;
     return 0;
 }
