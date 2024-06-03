@@ -1,3 +1,6 @@
+//modificar para que solicite el numero de dato ingresado
+//debera mostrar "ingrese digito 1" y asi sucesivamente 
+
 #include <iostream>
 using namespace std;
 int main ()
